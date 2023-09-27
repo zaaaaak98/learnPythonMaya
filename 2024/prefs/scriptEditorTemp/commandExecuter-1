@@ -1,7 +1,0 @@
-import prop_rig
-from importlib import reload
-reload(prop_rig)
-
-shape = input()
-
-prop_rig.createProp(shape)

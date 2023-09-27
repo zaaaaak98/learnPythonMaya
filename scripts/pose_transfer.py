@@ -19,7 +19,7 @@ def get_selected_namespaces():
 
         #add namespace to list of namespaces
 
-        if not namespace in namespaces_list:
+        if namespace not in namespaces_list:
             namespaces_list.append(namespace)
 
     return namespaces_list

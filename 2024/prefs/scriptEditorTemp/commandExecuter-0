@@ -1,4 +1,8 @@
-import sys
-from pprint import pprint
+import pose_transfer
+from importlib import reload 
 
-pprint(sys.path)
+reload(pose_transfer)
+
+namespaces = pose_transfer.get_selected_namespaces()
+
+print(namespaces)
