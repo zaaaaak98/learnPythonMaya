@@ -1,0 +1,14 @@
+//Maya Preference 2024 (Release 1)
+//
+//
+
+optionVar -version 3;
+
+// RecentFiles
+optionVar -cat "RecentFiles"
+ -sa "RecentFilesList"
+ -sva "RecentFilesList" "C:/Users/Izaak/Documents/maya/projects/default/scenes/Python Maya Course.mb"
+ -sa "RecentFilesTypeList"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ ;
+

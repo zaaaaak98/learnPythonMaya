@@ -1,0 +1,17 @@
+from maya import cmds
+
+
+def createProp(circleName, cubeName):
+    
+    ctrl = cmds.circle(name=circleName, radius=2, normal=[0,1,0])
+    ctrl_node = ctrl[0]
+    
+    prop = cmds.polyCube(name=cubeName)
+    prop_node = prop[0]
+    
+    
+    cmds.parent(prop_node, ctrl_node)T
+    
+    cmds.select(ctrl_node)
+    
+createProp("ctrl","prop")

@@ -1,0 +1,14 @@
+//Maya Preference 2023 (Release 1)
+//
+//
+
+optionVar -version 3;
+
+// RecentFiles
+optionVar -cat "RecentFiles"
+ -sa "RecentFilesList"
+ -sva "RecentFilesList" "C:/Program Files/Autodesk/Maya2023/Examples/Tutorials/Basics/Basics_Tutorial.ma"
+ -sa "RecentFilesTypeList"
+ -sva "RecentFilesTypeList" "mayaAscii"
+ ;
+
