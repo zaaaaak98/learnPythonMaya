@@ -1,0 +1,8 @@
+full_attr = "morpheus_female:all_anim|morpheus_female:Rigs_grp|morpheus_female:bodyRig_grp|morpheus_female:m_spine_Root_anim_DynDriven_grp|morpheus_female:m_spine_Root_anim|morpheus_female:rig_spine_0_skinFK1_anim|morpheus_female:rig_spine_0_skinFK2_anim|morpheus_female:rig_spine_0_skinFK3_anim|morpheus_female:rig_spine_0_skin_ShouldersParent|morpheus_female:rig_spine_0_skin_Shoulders_anim|morpheus_female:m_arm_RigXtras_l|morpheus_female:rig_clavicle_l_skin_FK_Cntrl_Parent|morpheus_female:rig_clavicle_l_skin_FK_anim|morpheus_female:rig_clavicle_l_skin_IK_anim.translateX"
+
+attributes = cmds.listAnimatable(ctrl_node)
+
+for full_attr in attributes:
+    parts = full_attr.split(".")
+    attr = parts[-1]
+    print(attr)

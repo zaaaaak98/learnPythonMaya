@@ -8,7 +8,7 @@ def get_selected_namespaces():
 
     """
     selection = cmds.ls(selection=True)
-    if len(selection) == 0:
+    if not selection:
         return []
 
     namespaces_list = []
@@ -23,3 +23,24 @@ def get_selected_namespaces():
             namespaces_list.append(namespace)
 
     return namespaces_list
+
+def get_attrs_from_node(ctrl_node):
+    """Get attribute names from single node
+
+    :param
+        ctrl_node(str):  Name of the node
+
+    :return:
+        list: List of short attribute names
+    """
+    attributes = cmds.listAnimatable(ctrl_node)
+    if not attributes:
+        return []
+
+    attr_names = []
+
+    for full_attr in attributes:
+        attr_name = full_attr.split(".")[-1]
+        attr_names.append(attr_name)
+
+    print(attr_names)

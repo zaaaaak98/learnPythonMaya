@@ -3,6 +3,7 @@ from importlib import reload
 
 reload(pose_transfer)
 
-namespaces = pose_transfer.get_selected_namespaces()
+attrs = pose_transfer.get_attrs_from_node("morpheus_female:rig_clavicle_l_skin_IK_anim")
 
-print(namespaces)
+
+print(attrs)

@@ -7,7 +7,7 @@ optionVar -version 3;
 // RecentFiles
 optionVar -cat "RecentFiles"
  -sa "RecentFilesList"
- -sva "RecentFilesList" "C:/Users/Izaak/Documents/maya/projects/default/scenes/Python Maya Course.mb"
+ -sva "RecentFilesList" "C:/Users/zakad/OneDrive/Documents/GitHub/learnPythonMaya/projects/default/scenes/Python Maya Course.mb"
  -sa "RecentFilesTypeList"
  -sva "RecentFilesTypeList" "mayaBinary"
  ;

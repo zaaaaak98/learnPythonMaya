@@ -1,0 +1,15 @@
+from maya import cmds
+from importlib import reload
+ctrl_node = "morpheus_female:rig_clavicle_l_skin_IK_anim"
+
+
+
+attributes = cmds.listAnimatable(ctrl_node)
+
+attr_names = []
+
+for full_attr in attributes:
+    parts = full_attr.split(".")
+    attr_name = parts[-1]
+    attr_names.append(attr_name)
+print(attr_names)
