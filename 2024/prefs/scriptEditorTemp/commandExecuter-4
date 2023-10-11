@@ -1,0 +1,6 @@
+dict = {'name': 1, 'name2': 2}
+
+print(dict['name'])
+dict['name3'] = 3
+
+print(dict)

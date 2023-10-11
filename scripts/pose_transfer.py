@@ -43,4 +43,40 @@ def get_attrs_from_node(ctrl_node):
         attr_name = full_attr.split(".")[-1]
         attr_names.append(attr_name)
 
-    print(attr_names)
+    return attr_names
+
+def get_pose_dict(namespace):
+    """
+
+    :param namespace(str): Filter selection by namespace
+    :return:
+        dict: Dictionary of controls with attributes and their values
+    """
+    #get selection
+    selection = cmds.ls(selection=True)
+    if not selection:
+        print("bug")
+        return {}
+    pose_dict = {}
+    for ctrl in selection:
+        # filter out the selection by the namespace
+        if not ctrl.startswith(namespace):
+            continue
+        # get attributes
+        animatable_attrs = get_attrs_from_node(ctrl)
+        if not animatable_attrs:
+            print("ping")
+            continue
+        #build dictionary
+        for attr in animatable_attrs:
+            ctrl_name = ctrl.split(':')[-1]
+            full_attr = '{}.{}'.format(ctrl_name, attr)
+            attr_value = '{}.{}'.format(ctrl, attr)
+            value = cmds.getAttr(attr_value)
+            # {'ctrl.attr' : attr_value}
+            pose_dict[full_attr] = value
+
+
+        #put together selection with attributes we've got
+        #build dictionary
+    return pose_dict
