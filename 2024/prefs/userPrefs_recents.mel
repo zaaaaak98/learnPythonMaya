@@ -8,7 +8,11 @@ optionVar -version 3;
 optionVar -cat "RecentFiles"
  -sa "RecentFilesList"
  -sva "RecentFilesList" "C:/Users/zakad/OneDrive/Documents/GitHub/learnPythonMaya/projects/default/scenes/Python Maya Course.mb"
+ -sva "RecentFilesList" "C:/Users/zakad/OneDrive/Documents/maya/projects/default/scenes/Python Maya Course.mb"
+ -sva "RecentFilesList" "C:/Users/zakad/OneDrive/Documents/maya/Maya Models/morpheus_male.mb"
  -sa "RecentFilesTypeList"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
  -sva "RecentFilesTypeList" "mayaBinary"
  ;
 

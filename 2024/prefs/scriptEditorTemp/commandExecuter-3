@@ -1,7 +1,9 @@
 from maya import cmds
 from importlib import reload
 import pose_transfer
+from pprint import pprint
+
 reload(pose_transfer)
 
 pose_dict = pose_transfer.get_pose_dict('morpheus_fem')
-print(pose_dict)
+pprint(pose_dict)

@@ -19,3 +19,7 @@ windowPref -topLeftCorner 235 230 -widthHeight 1000 495 -maximized true -parentM
 windowPref -topLeftCorner -8 -1 -widthHeight 1920 1009 -maximized true -parentMain false MayaWindow;
 windowPref -topLeftCorner 344 640 -widthHeight 546 350 -maximized false -parentMain true OptionBoxWindow;
 windowPref -topLeftCorner 344 640 -widthHeight 550 500 -maximized false -parentMain true projectWindow;
+windowPref -topLeftCorner 344 640 -widthHeight 405 438 -maximized false -parentMain true Viewport20OptionsWindow;
+windowPref -topLeftCorner 344 640 -widthHeight 358 199 -maximized false -parentMain true LayerEditorQuickEditWindow;
+windowPref -topLeftCorner 210 390 -widthHeight 817 531 -maximized false -parentMain true PreferencesWindow;
+windowPref -topLeftCorner 221 600 -widthHeight 520 620 -maximized false -parentMain true connectWindow;

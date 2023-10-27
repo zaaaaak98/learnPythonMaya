@@ -48,14 +48,14 @@ def get_attrs_from_node(ctrl_node):
 def get_pose_dict(namespace):
     """
 
-    :param namespace(str): Filter selection by namespace
+    :param namespace (str): Filter selection by namespace
     :return:
         dict: Dictionary of controls with attributes and their values
     """
     #get selection
     selection = cmds.ls(selection=True)
     if not selection:
-        print("bug")
+        print("Nothing is selected")
         return {}
     pose_dict = {}
     for ctrl in selection:
@@ -65,7 +65,6 @@ def get_pose_dict(namespace):
         # get attributes
         animatable_attrs = get_attrs_from_node(ctrl)
         if not animatable_attrs:
-            print("ping")
             continue
         #build dictionary
         for attr in animatable_attrs:
@@ -80,3 +79,15 @@ def get_pose_dict(namespace):
         #put together selection with attributes we've got
         #build dictionary
     return pose_dict
+
+def apply_pose(pose_dict, namespace):
+    #get attribute names
+    for attr_name in pose_dict.keys():
+        # add namespace to it
+        attr_value = pose_dict[attr_name]
+        full_attr_name = "{}:{}".format(namespace, attr_name)
+
+        #set attribute
+        cmds.setAttr(full_attr_name, attr_value)
+
+    #error checks

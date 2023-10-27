@@ -1,6 +1,11 @@
-dict = {'name': 1, 'name2': 2}
+from maya import cmds
+from importlib import reload
+import pose_transfer
+from pprint import pprint
+reload(pose_transfer)
 
-print(dict['name'])
-dict['name3'] = 3
+pose_dict = pose_transfer.get_pose_dict('morpheus_fem')
 
-print(dict)
+pprint(pose_dict)
+
+pose_transfer.apply_pose(pose_dict, "morpheus_male")
